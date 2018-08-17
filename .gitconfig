@@ -1,0 +1,13 @@
+[user]
+	name = gaojunru
+	email = gaojunru@thunisoft.com
+[alias]
+	cr = clone --recursive
+	fa = fetch --all
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
+	lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit --all
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
