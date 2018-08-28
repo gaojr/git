@@ -2,15 +2,27 @@
     name = gaojunru
     email = gaojunru@thunisoft.com
 [alias]
-    cr = clone --recursive
-    co = checkout
-    com = checkout master
-    cod = checkout develop
     br = branch
+    co = checkout
     rb = rebase
     st = status
+    # 克隆时初始化子模块
+    cr = clone --recursive
+    # 拉取所有分支 HEAD 信息
     fa = fetch --all
+     # 切换到 master 分支
+    com = checkout master
+    # 切换到 develop 分支
+    cod = checkout develop
+    # 获取远程分支到本地分支
+    # coo = checkout origin/remoteName -b localName
+    # 为本地分支连接远程分支
+    # link = branch --set-upstream-to=origin/remoteName localName
+    # 分支重命名
+    rename = branch -m
+    # 当前分支日志
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
+    # 所有分支日志
     lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit --all
 [color]
     status = auto
