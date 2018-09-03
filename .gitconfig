@@ -21,9 +21,9 @@
     # 分支重命名
     rename = branch -m
     # 当前分支日志
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
-    lga = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit --all
+    lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit --all
 [color]
     status = auto
     diff = auto
