@@ -28,10 +28,11 @@
     rename = branch -m
     # 强制推送
     pf = push -f
-    # 返回上一次提交(保留更改)
-    back = reset --soft HEAD~1
-    # 返回上一次提交(不保留更改)
-    last = reset --hard HEAD~1
+    # 撤销
+    rs = reset
+    rsh = reset --hard
+    # 上一个
+    last = HEAD~1
     # 当前分支日志
     lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
