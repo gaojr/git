@@ -14,12 +14,24 @@
     com = checkout master
     # 切换到 develop 分支
     cod = checkout develop
+    # 基于 develop 分支变基
+    rbd = rebase develop
+    # 在其他分支上更新 develop 分支
+    # git checkout develop && git rebase && git checkout -
+    # 在其他分支上更新 develop 分支并基于 develop 分支变基
+    # git checkout develop && git rebase && git checkout - && git rebase develop
     # 获取远程分支到本地分支
-    # coo = checkout origin/remoteName -b localName
+    # git checkout origin/remoteName -b localName
     # 为本地分支连接远程分支
-    # link = branch --set-upstream-to=origin/remoteName localName
+    # git branch --set-upstream-to=origin/remoteName localName
     # 分支重命名
     rename = branch -m
+    # 强制推送
+    pf = push -f
+    # 返回上一次提交(保留更改)
+    back = reset --soft HEAD~1
+    # 返回上一次提交(不保留更改)
+    last = reset --hard HEAD~1
     # 当前分支日志
     lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
