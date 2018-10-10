@@ -32,7 +32,8 @@
     rs = reset
     rsh = reset --hard
     # 上一个
-    last = HEAD~1
+    last = reset HEAD~1
+    back = reset --hard HEAD~1
     # 当前分支日志
     lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
