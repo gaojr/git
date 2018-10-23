@@ -38,6 +38,12 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
     lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit --all
+    # 暂存
+    temp = commit -a -m 'temp'
+    # 对比两个分支
+    diffbr = diff --stat
+    # 与 develop 分支对比
+    diffbrd = diff --stat develop
 [color]
     status = auto
     diff = auto
