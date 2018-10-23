@@ -26,8 +26,10 @@
     # git branch --set-upstream-to=origin/remoteName localName
     # 分支重命名
     rename = branch -m
+    # 强制推送
+    pf = push --force
     # 安全强制推送
-    pf = push --force-with-lease
+    pfwl = push --force-with-lease
     # 撤销
     rs = reset
     rsh = reset --hard
