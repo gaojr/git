@@ -41,9 +41,9 @@
     # 暂存
     temp = commit -a -m 'temp'
     # 对比两个分支
-    diffbr = diff --stat
+    diffb = diff --stat
     # 与 develop 分支对比
-    diffbrd = diff --stat develop
+    diffd = diff --stat develop
 [color]
     status = auto
     diff = auto
