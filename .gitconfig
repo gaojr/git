@@ -46,6 +46,9 @@
     diffb = diff --stat
     # 与 develop 分支对比
     diffd = diff --stat develop
+    # git flow 相关
+    feature = flow feature start --showcommands
+    bugfix = flow bugfix start --showcommands
 [color]
     status = auto
     diff = auto
