@@ -38,9 +38,9 @@
     # 存储
     sl = stash list
     ss = stash show
+    sa = stash apply
     save = stash save --include-untracked
     pop = stash pop
-    apply = stash apply
     temp = stash save --include-untracked '暂存'
     # 对比两个分支
     dif = diff --stat
