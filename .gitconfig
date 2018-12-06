@@ -3,6 +3,11 @@
 [user]
     name = username
     email = emailname@email.com
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
 [alias]
     br = branch
     co = checkout
@@ -59,8 +64,3 @@
     ## flow feature finish
     bugfix = flow bugfix start --showcommands
     hotfix = flow hotfix start --showcommands
-[color]
-    status = auto
-    diff = auto
-    branch = auto
-    interactive = auto
