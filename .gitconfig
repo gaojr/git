@@ -1,6 +1,6 @@
 [user]
-    name = gaojunru
-    email = gaojunru@email.com
+    name = username
+    email = emailname@email.com
 [alias]
     br = branch
     co = checkout
