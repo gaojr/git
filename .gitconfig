@@ -25,16 +25,18 @@
     pf = push --force
     # 安全强制推送
     pfw = push --force-with-lease
+    # 当前分支日志
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
+    # 所有分支日志
+    lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit --all
     # 撤销
     rs = reset
     rsh = reset --hard
     # 上一个
     last = reset HEAD~1
     back = reset --hard HEAD~1
-    # 当前分支日志
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
-    # 所有分支日志
-    lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit --all
+    # 暂存
+    tmp = commit -a -m 'tmp'
     # 存储
     sl = stash list
     ss = stash show
