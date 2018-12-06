@@ -9,7 +9,7 @@
     # 克隆时初始化子模块
     cr = clone --recursive
     # 拉取所有分支 HEAD 信息
-    fa = fetch --all
+    fa = fetch --all --prune
      # 切换到 master 分支
     com = checkout master
     # 切换到 develop 分支
