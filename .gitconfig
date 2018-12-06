@@ -17,10 +17,13 @@
     # 基于 develop 分支变基
     rbd = rebase develop
     # 获取远程分支到本地分支
-    # git checkout -b origin/remoteName localName
+    ## git checkout -b origin/remoteName localName
     track =  checkout --track
     # 当前分支重命名
     rename = branch --move
+    # 删除分支
+    brd = branch -d
+    brD = branch -D
     # 强制推送
     pf = push --force
     # 安全强制推送
@@ -41,8 +44,8 @@
     sl = stash list
     ss = stash show
     sa = stash apply
-    save = stash save --include-untracked
     pop = stash pop
+    save = stash save --include-untracked
     temp = stash save --include-untracked '暂存'
     # 对比两个分支
     dif = diff --stat
@@ -50,7 +53,10 @@
     difd = diff --stat develop
     # git flow 相关
     feature = flow feature start --showcommands
+    ## flow feature publish
+    ## flow feature finish
     bugfix = flow bugfix start --showcommands
+    hotfix = flow hotfix start --showcommands
 [color]
     status = auto
     diff = auto
