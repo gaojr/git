@@ -1,5 +1,5 @@
 [core]
-    quotepath = false # 不会对0×80以上的字符进行quote。中文显示正常
+    quotepath = false # 不会对 0×80 以上的字符进行 quote
 [user]
     name = username
     email = emailname@email.com
@@ -51,7 +51,8 @@
     sl = stash list
     ss = stash show
     sa = stash apply
-    pop = stash pop
+    sp = stash pop
+    resume = stash pop stash@{0}
     save = stash save --include-untracked
     temp = stash save --include-untracked '暂存'
     # 对比两个分支
