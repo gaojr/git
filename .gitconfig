@@ -55,7 +55,7 @@
     sp = stash pop
     sp0 = stash pop stash@{0}
     sd = stash drop
-    sd0 = srash drop stash@{0}
+    sd0 = stash drop stash@{0}
     save = stash save --include-untracked
     temp = stash save --include-untracked '暂存'
     # 对比两个分支
