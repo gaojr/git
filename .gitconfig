@@ -51,8 +51,11 @@
     sl = stash list
     ss = stash show
     sa = stash apply
+    sa0 = stash apply stash@{0}
     sp = stash pop
-    resume = stash pop stash@{0}
+    sp0 = stash pop stash@{0}
+    sd = stash drop
+    sd0 = srash drop stash@{0}
     save = stash save --include-untracked
     temp = stash save --include-untracked '暂存'
     # 对比两个分支
@@ -65,3 +68,5 @@
     ## flow feature finish
     bugfix = flow bugfix start --showcommands
     hotfix = flow hotfix start --showcommands
+    # 从object数据库中删除所有不可达的object
+    clear = gc --prune=now --aggressive
