@@ -10,4 +10,6 @@ git 相关
 | --global | 具体用户 | C:/Users/`用户名`/.gitconfig |
 | --local | 具体项目 | `项目地址`/.git/gitconfig |
 
-`.gitconfig` 文件为 global 级的配置文件
+默认为 `local`
+
+[.gitconfig](.gitconfig) 文件为 global 级的配置文件
