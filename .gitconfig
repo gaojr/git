@@ -51,11 +51,11 @@
     sl = stash list
     ss = stash show
     sa = stash apply
-    sa0 = stash apply stash@{0}
+    sa1 = stash apply stash@{1}
     sp = stash pop
-    sp0 = stash pop stash@{0}
+    sp1 = stash pop stash@{1}
     sd = stash drop
-    sd0 = stash drop stash@{0}
+    sd1 = stash drop stash@{1}
     save = stash save --include-untracked
     temp = stash save --include-untracked '暂存'
     # 对比两个分支
