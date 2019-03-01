@@ -47,6 +47,8 @@
     back = reset --hard HEAD~1
     # 暂存
     tmp = commit -a -m 'tmp'
+    # cherry-pick
+    cp = cherry-pick
     # 存储
     sl = stash list
     ss = stash show
