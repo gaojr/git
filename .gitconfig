@@ -39,6 +39,14 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
     lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit --all
+    # 删除 untracked 文件
+    cf = clean -fq
+    # 显示将要删除的 untracked 文件
+    cfn = clean -fn
+    # 删除 untracked 文件及文件夹
+    cfd = clean -fdq
+    # 显示将要删除的 untracked 文件及文件夹
+    cfdn = clean -fdn
     # 撤销
     rs = reset
     rsh = reset --hard
