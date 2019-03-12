@@ -21,6 +21,8 @@
     com = checkout master
     # 切换到 develop 分支
     cod = checkout develop
+    # 基于 master 分支变基
+    rbm = rebase master
     # 基于 develop 分支变基
     rbd = rebase develop
     # 获取远程分支到本地分支
