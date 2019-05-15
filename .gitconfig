@@ -1,5 +1,5 @@
 [winUpdater]
-	recentlySeenVersion = 2.21.0.windows.1
+    recentlySeenVersion = 2.21.0.windows.1
 [core]
     quotepath = false # 不会对 0×80 以上的字符进行 quote
 [user]
