@@ -32,7 +32,7 @@
     # 拉取远程分支并新建本地同名分支
     track = checkout --track
     # 查看本地分支跟踪的远程分支
-    brv = branch --vv
+    brv = branch -vv
     # 当前分支重命名
     rename = branch --move
     # 删除分支
