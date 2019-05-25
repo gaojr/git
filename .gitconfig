@@ -31,10 +31,14 @@
     ## git checkout -b origin/remoteName localName
     # 拉取远程分支并新建本地同名分支
     track = checkout --track
-    # 查看本地分支跟踪的远程分支
-    brv = branch -vv
     # 当前分支重命名
     rename = branch --move
+    # 查看所有分支
+    bra = branch -a
+    # 查看远程分支
+    brr = branch -r
+    # 查看本地分支跟踪的远程分支
+    brv = branch -vv
     # 删除分支
     brd = branch -d
     brD = branch -D
