@@ -35,6 +35,7 @@
     rename = branch --move
     # 查看所有分支
     bra = branch -a
+    brav = branch -a -vv
     # 查看远程分支
     brr = branch -r
     # 查看本地分支跟踪的远程分支
