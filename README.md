@@ -12,4 +12,14 @@ git 相关
 
 默认为 `local`
 
-[.gitconfig](.gitconfig) 文件为 global 级的配置文件
+[.gitconfig](./.gitconfig) 文件为 global 级的配置文件
+
+## 命令自动补全
+
+window下, 下载 [.bash_profile.sh](./.bash_profile.sh) 和 [.git-completion.bash](./.git-completion.bash), 放到 [.gitconfig](./.gitconfig) 同目录下, 打开 git bash, 输入以下命令:
+
+```bash
+source ~/.bash_profile
+```
+
+之后使用时按 [[TAB]] 进行自动补全命令或提示
