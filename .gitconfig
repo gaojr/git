@@ -1,5 +1,5 @@
 [winUpdater]
-    recentlySeenVersion = 2.21.0.windows.1
+    recentlySeenVersion = 2.22.0.windows.1
 [core]
     quotepath = false # 不会对 0×80 以上的字符进行 quote
 [user]
@@ -14,6 +14,7 @@
     br = branch
     co = checkout
     rb = rebase
+    mg = merge --no-ff
     st = status --untracked-files --show-stash
     # 克隆时初始化子模块
     cr = clone --recursive
