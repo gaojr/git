@@ -24,12 +24,14 @@
     com = checkout master
     # 切换到 develop 分支
     cod = checkout develop
+    # 新建分支
+    new = checkout -b
     # 基于 master 分支变基
     rbm = rebase master
     # 基于 develop 分支变基
     rbd = rebase develop
     # 获取远程分支到本地分支
-    ## git checkout -b origin/remoteName localName
+    # git checkout -b origin/remoteName localName
     # 拉取远程分支并新建本地同名分支
     track = checkout --track
     # 当前分支重命名
@@ -49,9 +51,9 @@
     # 安全强制推送
     pfw = push --force-with-lease
     # 当前分支日志
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%an> %Cgreen(%ar) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
-    lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%cn> %Cgreen(%cr) %C(yellow)%d' --abbrev-commit --all
+    lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%an> %Cgreen(%ar) %C(yellow)%d' --abbrev-commit --all
     # 删除 untracked 文件
     cf = clean -fq
     # 显示将要删除的 untracked 文件
