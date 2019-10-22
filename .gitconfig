@@ -11,7 +11,7 @@
     branch = auto
     interactive = auto
 [alias]
-    br = branch
+    br = branch -vv
     co = checkout
     rb = rebase
     mg = merge --no-ff
@@ -20,7 +20,7 @@
     cr = clone --recursive
     # 拉取所有分支 HEAD 信息
     fa = fetch --all --prune
-     # 切换到 master 分支
+    # 切换到 master 分支
     com = checkout master
     # 切换到 develop 分支
     cod = checkout develop
@@ -37,12 +37,7 @@
     # 当前分支重命名
     rename = branch --move
     # 查看所有分支
-    bra = branch -a
-    brav = branch -a -vv
-    # 查看远程分支
-    brr = branch -r
-    # 查看本地分支跟踪的远程分支
-    brv = branch -vv
+    bra = branch -vv -a
     # 删除分支
     brd = branch -d
     brD = branch -D
@@ -54,10 +49,6 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%an> %Cgreen(%ar) %C(yellow)%d' --abbrev-commit
     # 所有分支日志
     lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%an> %Cgreen(%ar) %C(yellow)%d' --abbrev-commit --all
-    # 删除 untracked 文件
-    cf = clean -fq
-    # 显示将要删除的 untracked 文件
-    cfn = clean -fn
     # 删除 untracked 文件及文件夹
     cfd = clean -fdq
     # 显示将要删除的 untracked 文件及文件夹
