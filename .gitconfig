@@ -54,9 +54,9 @@
     # 安全强制推送
     pfw = push --force-with-lease
     # 当前分支日志
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%an> %Cgreen(%ar) %C(yellow)%d' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset %s %Cblue<%an>%Cgreen(%ad, %ar) %C(yellow)%d' --date=format:'%Y-%m-%d %H:%M' --abbrev-commit
     # 所有分支日志
-    lga = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cblue<%an> %Cgreen(%ar) %C(yellow)%d' --abbrev-commit --all
+    lga = log --color --graph --pretty=format:'%Cred%h%Creset %s %Cblue<%an>%Cgreen(%ad, %ar) %C(yellow)%d' --date=format:'%Y-%m-%d %H:%M' --abbrev-commit --all
     # 删除 untracked 文件及文件夹
     cfd = clean -fdq
     # 显示将要删除的 untracked 文件及文件夹
