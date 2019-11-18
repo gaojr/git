@@ -72,7 +72,7 @@
     # cherry-pick
     cp = cherry-pick
     # 存储
-    sl = stash list
+    sl = stash list --pretty=format:'%Cred%h%Creset%C(yellow)(%gd)%Creset %s'
     ss = stash show
     sa = stash apply
     sa1 = stash apply stash@{1}
@@ -86,11 +86,5 @@
     dif = diff --stat
     # 与 develop 分支对比
     difd = diff --stat develop
-    # git flow 相关
-    feature = flow feature start --showcommands
-    ## flow feature publish
-    ## flow feature finish
-    bugfix = flow bugfix start --showcommands
-    hotfix = flow hotfix start --showcommands
     # 从object数据库中删除所有不可达的object
     clear = gc --prune=now --aggressive
