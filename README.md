@@ -40,7 +40,10 @@ powershell:
 
 ### PowerShell
 
-1. 打开 powershell, 输入并运行 `setx LESSCHARSET 'utf-8'`
+1. 打开 powershell, 输入并运行
+    ```sh
+    setx LESSCHARSET 'utf-8'
+    ```
 2. 重启 powershell
 
 ### IntelliJ IDEA 里的 terminal
@@ -49,13 +52,13 @@ powershell:
     1. File -> settings -> Tools -> Terminal
     2. `Shell path` 改为: `git 安装地址`/bin/bash.exe
 2. `git 安装地址`/etc/bash.bashrc 末尾添加:
-    ```
+    ```sh
     # 解决 IDEA 下的 terminal 中文 Unicode 编码问题
     export LANG="zh_CN.UTF-8"
     export LC_ALL="zh_CN.UTF-8"
     ```
 3. git 设置全局配置:
-    ```
+    ```sh
     # 不会对 0×80 以上的字符进行 quote
     git config --global core.quotepath false
     # 界面编码
