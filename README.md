@@ -24,27 +24,46 @@ source ~/.bash_profile
 
 之后使用时按 [[TAB]] 进行自动补全命令或提示
 
-参考:
-* [Git - Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
-* [Git - Git in PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell)
+## 个性化
 
-## IntelliJ IDEA 下 terminal 乱码问题
+git:
+* [How To Customize The Git For Windows Bash Shell Prompt | Alan P. Barber](https://alanbarber.com/post/how-to-customize-the-git-for-windows-bash-shell-prompt/)
+
+cmd:
+* [Git - Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
+
+powershell:
+* [Git - Git in PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell)
+* [dahlbyk/posh-git: A PowerShell environment for Git](https://github.com/dahlbyk/posh-git)
+
+## 各种乱码
+
+### PowerShell
+
+1. 打开 powershell, 输入并运行 `setx LESSCHARSET 'utf-8'`
+2. 重启 powershell
+
+### IntelliJ IDEA 里的 terminal
 
 1. 把 IDEA 的 Terminal 命令窗口修改为 git bash 命令窗口
     1. File -> settings -> Tools -> Terminal
     2. `Shell path` 改为: `git 安装地址`/bin/bash.exe
 2. `git 安装地址`/etc/bash.bashrc 末尾添加:
     ```
-    # 解决IDEA下的terminal中文Unicode编码问题
+    # 解决 IDEA 下的 terminal 中文 Unicode 编码问题
     export LANG="zh_CN.UTF-8"
     export LC_ALL="zh_CN.UTF-8"
     ```
 3. git 设置全局配置:
     ```
+    # 不会对 0×80 以上的字符进行 quote
+    git config --global core.quotepath false
     # 界面编码
-    git config --global gui.encoding utf-8 
+    git config --global gui.encoding utf-8
     # 提交编码
     git config --global i18n.commitencoding utf-8
     # 日志编码
     git config --global i18n.logoutputencoding utf-8
+    # svn 路径编码
+    git config --global svn.pathnameencoding utf-8
     ```
