@@ -35,6 +35,14 @@ cmd:
 powershell:
 * [Git - Git in PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell)
 * [dahlbyk/posh-git: A PowerShell environment for Git](https://github.com/dahlbyk/posh-git)
+    1. [下载地址](https://github.com/dahlbyk/posh-git/releases/tag/v1.0.0-beta3)中下载 zip 文件
+    2. 在 `~\Documents\WindowsPowerShell/profile.ps1` 中加入（若没有该文件，则新建一个）:
+        ```ps1
+        Import-Module 'C:\Windows\System32\WindowsPowerShell\posh-git-1.0.0-beta3\src\posh-git.psd1'
+        $GitPromptSettings.DefaultPromptPath.ForegroundColor = 'Orange'
+        $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
+        $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory=$false
+        ```
 
 ## 各种乱码
 
