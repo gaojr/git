@@ -2,9 +2,10 @@
     recentlySeenVersion = {{version}}
 [core]
     quotepath = false # 不会对 0×80 以上的字符进行 quote
+    editor = {{editor}} --wait
 [user]
     name = {{username}}
-    email = {{emailname@email.com}}
+    email = {{email}}
 [color]
     status = auto
     diff = auto
@@ -13,11 +14,18 @@
 [gui]
     encoding = utf-8
 [i18n]
+    # 提交文件编码
     commitencoding = utf-8
+    # 输出日志编码
+    logoutputencoding = utf-8
 [svn]
     pathnameencoding = utf-8
 [credential]
     helper = store
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [alias]
     br = branch -vv
     co = checkout
@@ -88,3 +96,5 @@
     difd = diff --stat develop
     # 从object数据库中删除所有不可达的object
     clear = gc --prune=now --aggressive
+    # 更新
+    update = update-git-for-windows
