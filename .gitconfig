@@ -11,6 +11,12 @@
     diff = auto
     branch = auto
     interactive = auto
+[color "branch"]
+    current = bold cyan # green
+    local = cyan # normal
+    remote = bold red # red
+    upstream = bold yellow #blue
+    plain = normal # normal
 [gui]
     encoding = utf-8
 [i18n]
@@ -31,7 +37,7 @@
     co = checkout
     rb = rebase
     mg = merge --no-ff
-    st = status --untracked-files --show-stash
+    st = status --short --branch
     # 克隆时初始化子模块
     cr = clone --recursive
     # 拉取所有分支 HEAD 信息
