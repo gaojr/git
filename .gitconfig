@@ -103,4 +103,4 @@
     # 从object数据库中删除所有不可达的object
     clear = gc --prune=now --aggressive
     # 更新
-    update = update-git-for-windows
+    ud = update-git-for-windows
