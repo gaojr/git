@@ -26,23 +26,50 @@ source ~/.bash_profile
 
 ## 个性化
 
-git:
+**git bash**
+
+效果图:
+![git效果图](./效果图-vscode.png)
+![git效果图](./效果图-bash.png)
+> Git bash 下因为字体不支持 fontawesome 所以不显示图标
+
+步骤:
+1. 新建或修改 `~\.bash_profile`, 在末尾加上:
+    ```sh
+    test -f ~/.profile && . ~/.profile
+    test -f ~/.bashrc && . ~/.bashrc
+    ```
+2. 新建或修改 `~\.bashrc`, 在末尾加上:
+    ```sh
+    test -f ~/git-prompt.posh-git.sh && . ~/git-prompt.posh-git.sh
+    test -f ~/git-prompt.oh-my-posh.sh && . ~/git-prompt.oh-my-posh.sh
+    ```
+3. 把 [git-prompt.posh-git.sh](./git-prompt.posh-git.sh) 和 [git-prompt.oh-my-posh.sh](./git-prompt.oh-my-posh.sh) 复制到 `~` 目录下
+4. 重启 git bash
+
+参考文档:
 * [How To Customize The Git For Windows Bash Shell Prompt | Alan P. Barber](https://alanbarber.com/post/how-to-customize-the-git-for-windows-bash-shell-prompt/)
 
-cmd:
+**cmd**
+
+参考文档:
 * [Git - Git in Bash](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash)
 
-powershell:
+**powershell**
+
+步骤:
+1. [下载地址](https://github.com/dahlbyk/posh-git/releases/tag/v1.0.0-beta3)中下载 zip 文件并解压
+2. 在 `~\Documents\WindowsPowerShell/profile.ps1` 中加入（若没有该文件，则新建一个）:
+    ```ps1
+    Import-Module '解压的路径\src\posh-git.psd1'
+    $GitPromptSettings.DefaultPromptPath.ForegroundColor = 'Orange'
+    $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
+    $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory=$false
+    ```
+
+参考文档:
 * [Git - Git in PowerShell](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-PowerShell)
 * [dahlbyk/posh-git: A PowerShell environment for Git](https://github.com/dahlbyk/posh-git)
-    1. [下载地址](https://github.com/dahlbyk/posh-git/releases/tag/v1.0.0-beta3)中下载 zip 文件并解压
-    2. 在 `~\Documents\WindowsPowerShell/profile.ps1` 中加入（若没有该文件，则新建一个）:
-        ```ps1
-        Import-Module '解压的路径\src\posh-git.psd1'
-        $GitPromptSettings.DefaultPromptPath.ForegroundColor = 'Orange'
-        $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
-        $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory=$false
-        ```
 
 ## 各种乱码
 
