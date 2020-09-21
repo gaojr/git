@@ -1,3 +1,5 @@
+branch_name=""
+
 __posh_git_ps1 () {
   branch_name=$(__branch_name)
   if [ -z "$branch_name" ]; then
@@ -27,12 +29,11 @@ __branch_icon () {
 
 __branch_status() {
   out=""
-  status="$(git status --short --branch 2>/dev/null | head -n 1)"
-  if [[ $status =~ \.\.\. ]]; then
+  origin_name="$(git status --short --branch 2>/dev/null | head -n 1)"
+  if [[ $origin_name =~ \.\.\. ]]; then
     # 有远端分支
-    origin_name=${status##*...}
-    origin_name=${origin_name%% *}
-    lrc="$(git rev-list --left-right --count origin/master...master 2>/dev/null)"
+    origin_name=${origin_name##*...}
+    lrc="$(git rev-list --left-right --count $origin_name...$branch_name 2>/dev/null)"
     arr=(${lrc// / })
     behind=${arr[0]};
     ahead=${arr[1]};
