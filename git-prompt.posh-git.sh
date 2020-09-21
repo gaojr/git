@@ -33,6 +33,7 @@ __branch_status() {
   if [[ $origin_name =~ \.\.\. ]]; then
     # 有远端分支
     origin_name=${origin_name##*...}
+    origin_name=${origin_name%% *}
     lrc="$(git rev-list --left-right --count $origin_name...$branch_name 2>/dev/null)"
     arr=(${lrc// / })
     behind=${arr[0]};
