@@ -10,7 +10,7 @@ __color () {
   echo \\[\\033\[$1m\\]
 }
 
-PS1='\[\033]0;bash:$PWD\007\]' # set window title
+PS1='\[\033]0;git:$PWD\007\]' # set window title
 PS1="$PS1"'\n'
 PS1="$PS1"$(__color $Yellow)
 PS1="$PS1"'⚡ '
