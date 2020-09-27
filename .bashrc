@@ -5,7 +5,7 @@ alias ls='ls --color=tty'
 
 # git 默认配置
 COMPLETION_PATH="$GIT_INSTALL_ROOT\mingw64\share\git\completion"
-test -f "$COMPLETION_PATH/git-completion.sh" && . "$COMPLETION_PATH/git-completion.sh"
+test -f "$COMPLETION_PATH/git-completion.bash" && . "$COMPLETION_PATH/git-completion.bash"
 test -f "$COMPLETION_PATH/git-prompt.sh" && . "$COMPLETION_PATH/git-prompt.sh"
 
 # 样式
