@@ -92,7 +92,7 @@ source ~/.bash_profile
 1. 把 IDEA 的 Terminal 命令窗口修改为 git bash 命令窗口
     1. File -> settings -> Tools -> Terminal
     2. `Shell path` 改为: `git 安装地址`/bin/bash.exe
-2. `git 安装地址`/etc/bash.bashrc 末尾添加:
+2. `~\.bashrc` 末尾添加:
     ```sh
     # 解决 IDEA 下的 terminal 中文 Unicode 编码问题
     export LANG="zh_CN.UTF-8"
