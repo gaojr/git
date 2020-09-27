@@ -14,15 +14,20 @@ git 相关
 
 [.gitconfig](./.gitconfig) 文件为 global 级的配置文件
 
-## 命令自动补全
+## *DEPRECATED* 命令自动补全
 
+<!--
 window下, 下载 [.bash_profile.sh](./.bash_profile.sh) 和 [.git-completion.bash](./.git-completion.bash), 放到 [.gitconfig](./.gitconfig) 同目录下, 打开 git bash, 输入以下命令:
 
 ```bash
 source ~/.bash_profile
 ```
+-->
 
-之后使用时按 [[TAB]] 进行自动补全命令或提示
+按 [[TAB]] 进行自动补全命令或提示
+
+@date 2020-09-27
+貌似 git 自己就有命令补全文件且默认是引入的, 文件: `git 安装地址`\mingw64\share\git\completion\git-completion.bash
 
 ## 个性化
 
@@ -31,7 +36,7 @@ source ~/.bash_profile
 效果图:
 ![git效果图](./效果图-vscode.png)
 ![git效果图](./效果图-bash.png)
-> Git bash 下因为字体不支持 fontawesome 所以不显示图标
+> 若字体不支持 fontawesome 则不显示图标
 
 步骤:
 1. 新建或修改 `~\.bash_profile`, 在末尾加上:
@@ -60,7 +65,7 @@ source ~/.bash_profile
 
 步骤:
 1. [下载地址](https://github.com/dahlbyk/posh-git/releases/tag/v1.0.0-beta3)中下载 zip 文件并解压
-2. 在 `~\Documents\WindowsPowerShell/profile.ps1` 中加入（若没有该文件，则新建一个）:
+2. 在 `~\Documents\WindowsPowerShell/profile.ps1` 中加入（若没有该文件, 则新建一个）:
     ```ps1
     Import-Module '解压的路径\src\posh-git.psd1'
     $GitPromptSettings.DefaultPromptPath.ForegroundColor = 'Orange'
