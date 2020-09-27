@@ -49,6 +49,7 @@ source ~/.bash_profile
 
 参考文档:
 * [How To Customize The Git For Windows Bash Shell Prompt | Alan P. Barber](https://alanbarber.com/post/how-to-customize-the-git-for-windows-bash-shell-prompt/)
+* [lyze/posh-git-sh: Bash/ZSH version of the posh-git command prompt](https://github.com/lyze/posh-git-sh)
 
 **cmd**
 
