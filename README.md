@@ -34,8 +34,8 @@ source ~/.bash_profile
 **git bash**
 
 效果图:
-![git效果图](./效果图-vscode.png)
-![git效果图](./效果图-bash.png)
+![git效果图](./img/效果图-vscode.png)
+![git效果图](./img/效果图-bash.png)
 > 若字体不支持 fontawesome 则不显示图标
 
 步骤:
