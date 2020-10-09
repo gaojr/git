@@ -7,7 +7,7 @@ CyanReverse='0;7;36'
 CyanYellow='0;36;43'
 
 __color () {
-  echo \\[\\033\[$1m\\]
+  echo '\[\033['$1'm\]'
 }
 
 PS1='\[\033]0;git:$PWD\007\]' # set window title
