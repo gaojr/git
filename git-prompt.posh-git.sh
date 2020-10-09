@@ -1,19 +1,24 @@
 branch_name="";
 
 __posh_git_ps1 () {
-  branch_name=$(__branch_name);
-  if [ -z "$branch_name" ]; then
+  repo_info="$(git rev-parse --is-inside-git-dir --is-inside-work-tree --short 2>/dev/null)";
+  if [ -z "$repo_info" ]; then
     # 不是git
     return 1;
   fi
   icon=$(__branch_icon);
-  printf "$icon $branch_name";
-  branch_status=$(__branch_status);
-  printf "$branch_status";
-}
+  branch_status=" ≢";
 
-__branch_name () {
-  printf "$(git symbolic-ref --short HEAD 2>/dev/null)";
+  info=(${repo_info//\n/ });
+  inside_gitdir=${info[0]};
+  if [ "true" = "$inside_gitdir" ]; then
+    branch_name="GIT_DIR";
+  else
+    # inside_worktree=${info[1]};
+    branch_name="$(git symbolic-ref --short HEAD 2>/dev/null)";
+    branch_status=$(__branch_status);
+  fi
+  printf "$icon $branch_name$branch_status";
 }
 
 __branch_icon () {
