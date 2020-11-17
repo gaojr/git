@@ -1,7 +1,7 @@
 # 别名
-alias la='ls -lAh'
-alias ll='ls -lh'
-alias ls='ls --color=tty'
+alias ls='ls --show-control-chars --color=tty -x'
+alias ll='ls --show-control-chars --color=tty -lh'
+alias la='ls --show-control-chars --color=tty -lhA'
 
 # git 默认配置
 GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
@@ -17,3 +17,4 @@ test -f ~/git-prompt.oh-my-posh.sh && . ~/git-prompt.oh-my-posh.sh
 # 解决 IDEA 下的 terminal 中文 Unicode 编码问题
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
+export LESSCHARSET=utf-8
