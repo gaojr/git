@@ -1,7 +1,7 @@
 # 别名
-alias ls='ls --show-control-chars --color=tty -x'
-alias ll='ls --show-control-chars --color=tty -lh'
-alias la='ls --show-control-chars --color=tty -lhA'
+alias ls='ls --show-control-chars --color=tty -x | less'
+alias ll='ls --show-control-chars --color=tty -lh | less'
+alias la='ls --show-control-chars --color=tty -lhA | less'
 
 # git 默认配置
 GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
