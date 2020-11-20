@@ -3,6 +3,7 @@ alias ..='cd ..'
 alias ls='ls --show-control-chars --color=auto -F'
 alias ll='ls --show-control-chars --color=auto -Flh'
 alias la='ls --show-control-chars --color=auto -FlhA'
+alias host='code /c/Windows/System32/drivers/etc/hosts'
 
 # git 默认配置
 GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
