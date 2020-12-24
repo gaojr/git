@@ -20,3 +20,6 @@ test -f ~/git-prompt.oh-my-posh.sh && . ~/git-prompt.oh-my-posh.sh
 export LANG="zh_CN.UTF-8"
 export LC_ALL="zh_CN.UTF-8"
 export LESSCHARSET=utf-8
+
+# 设置窗口标题
+echo -ne "\033]0; bash \007"
